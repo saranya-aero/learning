@@ -5,5 +5,16 @@
 </head>
 <body>
   <p> Welcome new app </p>
+  <script src="/socket.io/socket.io.js"> </script>
+  <script>
+    var socket = io();
+    socket.on("connect", function(){
+      console.log("Connected to the server");
+    });
+
+    socket.on('disconnect', function(){
+      console.log("server disconnected");
+    })
+  </script>
 </body>
 </html>
